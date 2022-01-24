@@ -1,0 +1,17 @@
+﻿<Window x:Class="ChickenInvaders.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChickenInvaders"
+        mc:Ignorable="d"
+        Title="Chicken Invaders" Width="900" Height="680" ResizeMode="NoResize"
+        FocusManager.FocusedElement="{Binding ElementName=MyCanvas}">
+        
+        <Canvas Name="MyCanvas" Background="Black" Focusable="True" KeyDown="SpaceShip_OnKeyDown" KeyUp="SpaceShip_OnKeyUp">
+                <Label Name="Lives" Foreground="Azure" FontSize="18" FontWeight="UltraBold">Lives left: </Label>
+                <Label Name="Score" Foreground="Azure" FontSize="15" Canvas.Left="400" FontWeight="ExtraBold">Score: </Label>
+                <Label Name="Level" Foreground="Azure" FontSize="15" Canvas.Left="800" FontWeight="ExtraBold" >Level: </Label>
+                <Rectangle Name="SpaceShip" Fill="White" Width="80" Height="80" Canvas.Top="560" Canvas.Left="400" />
+        </Canvas>
+</Window>
